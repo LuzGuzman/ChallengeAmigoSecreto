@@ -15,3 +15,14 @@ function mostrarLista() {
 function limpiarCaja(){
     document.querySelector("#amigo").value="";
 }
+
+function agregarAmigo(){
+    let NombreUsuario=document.getElementById("amigo").value;
+    if(NombreUsuario==""){
+        alert("Por favor ingrese un nombre valido");
+    }else{
+        listaNombresSorteados.push(NombreUsuario);
+        limpiarCaja();
+        mostrarLista();
+    }
+}
